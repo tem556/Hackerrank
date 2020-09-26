@@ -1,0 +1,19 @@
+import string
+s = input()
+# s = s.split()
+output = ""
+
+for n in string.ascii_lowercase:
+    for e in s:
+        if n==e:
+            output+=e
+for i in s :
+    if i in string.ascii_uppercase:
+        output+=i
+for i in s:
+    if i in string.digits and int(i)%2==1:
+        output+=i
+for i in s:
+    if i in string.digits and int(i)%2==0:
+        output+=i
+print(output)
